@@ -1,0 +1,16 @@
+Title: TechFest 2026 Organising Committee
+Date: 2026-10-14
+Attendees: Meera, Aditya, Sana, Vikram
+
+Meera: We have about three weeks before TechFest, so let's lock the schedule today.
+Aditya: The auditorium is booked for the 5th of November. I'll confirm the projector and mic setup with the admin office tomorrow.
+Meera: Good. We should shift the hackathon to the seminar hall because it has better wifi.
+Sana: Fine by me.
+Vikram: I'll design the posters and share the drafts by Thursday.
+Meera: We need to contact sponsors. Sana, could you reach out to the three companies on the list?
+Sana: Sure, I'll email them before 20th October.
+Meera: Also the registration form needs to be published as soon as possible.
+Vikram: I can do it, probably tonight.
+Meera: We haven't decided how many volunteers we need.
+Aditya: Not sure, let me check with last year's team.
+Meera: Let's revisit that in the next meeting on Friday.

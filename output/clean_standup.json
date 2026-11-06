@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "title": "Weekly Backend Standup",
+    "date": "2026-10-19",
+    "participants": [
+      "Dev",
+      "Isha",
+      "Neel"
+    ],
+    "turns": 6,
+    "words": 65,
+    "duration_min": null,
+    "agenda": null
+  },
+  "summary": {
+    "overview": [
+      "The payment API integration is complete and tested."
+    ],
+    "topics": [
+      "payment",
+      "integration",
+      "tested"
+    ]
+  },
+  "decisions": [
+    {
+      "text": "Use PostgreSQL instead of MongoDB",
+      "rationale": "the data is highly relational",
+      "proposed_by": "Dev",
+      "confirmed_by": null,
+      "turn": 2,
+      "id": "D1"
+    }
+  ],
+  "actions": [
+    {
+      "task": "Write the deployment guide",
+      "owner": "Isha",
+      "owner_label": null,
+      "pronoun": null,
+      "suggested_owner": null,
+      "deadline": {
+        "raw": "by 23rd October",
+        "date": "2026-10-23",
+        "kind": "exact"
+      },
+      "priority": "Medium",
+      "dependency": null,
+      "tentative": false,
+      "vague_task": false,
+      "strength": "explicit",
+      "source": "I'll write the deployment guide by 23rd October.",
+      "said_by": "Isha",
+      "turn": 1,
+      "time": null,
+      "status": "ready",
+      "flags": [],
+      "questions": [],
+      "confidence": 1.0,
+      "resolved_fields": [],
+      "id": "A1"
+    },
+    {
+      "task": "Migrate the user table to PostgreSQL",
+      "owner": "Neel",
+      "owner_label": null,
+      "pronoun": null,
+      "suggested_owner": null,
+      "deadline": {
+        "raw": "by 28th October",
+        "date": "2026-10-28",
+        "kind": "exact"
+      },
+      "priority": "Medium",
+      "dependency": null,
+      "tentative": false,
+      "vague_task": false,
+      "strength": "explicit",
+      "source": "Neel, can you migrate the user table to PostgreSQL by 28th October?  ->  Yes, I'll migrate the user table by 28th October.",
+      "said_by": "Isha",
+      "turn": 3,
+      "time": null,
+      "status": "ready",
+      "flags": [],
+      "questions": [],
+      "confidence": 1.0,
+      "resolved_fields": [],
+      "accepted_by": "Neel",
+      "id": "A2"
+    },
+    {
+      "task": "Review the migration scripts",
+      "owner": "Dev",
+      "owner_label": null,
+      "pronoun": null,
+      "suggested_owner": null,
+      "deadline": {
+        "raw": "on 29th October",
+        "date": "2026-10-29",
+        "kind": "exact"
+      },
+      "priority": "Medium",
+      "dependency": null,
+      "tentative": false,
+      "vague_task": false,
+      "strength": "explicit",
+      "source": "I will review the migration scripts on 29th October.",
+      "said_by": "Dev",
+      "turn": 5,
+      "time": null,
+      "status": "ready",
+      "flags": [],
+      "questions": [],
+      "confidence": 1.0,
+      "resolved_fields": [],
+      "id": "A3"
+    }
+  ],
+  "follow_ups": [],
+  "stats": {
+    "per_speaker": [
+      {
+        "name": "Dev",
+        "words": 34,
+        "turns": 3,
+        "actions": 1
+      },
+      {
+        "name": "Isha",
+        "words": 22,
+        "turns": 2,
+        "actions": 1
+      },
+      {
+        "name": "Neel",
+        "words": 9,
+        "turns": 1,
+        "actions": 1
+      }
+    ],
+    "unassigned": 0
+  },
+  "clarifications": [],
+  "health": {
+    "total": 3,
+    "ready": 3,
+    "needs_clarification": 0,
+    "completeness": 100,
+    "avg_confidence": 1.0
+  }
+}

@@ -1,0 +1,14 @@
+Title: Final Year Project Review
+Date: 2026-10-12
+Attendees: Dr. Menon, Arjun, Divya, Tanvi
+
+Dr. Menon: Let's go through the milestones. Arjun, where are we with the dataset?
+Arjun: We collected about 4,000 images, but the labelling is only half done.
+Dr. Menon: The labelling must be finished by the 20th of October. Divya, please help Arjun with that.
+Divya: Okay, I'll label 1,000 images by the 18th.
+Tanvi: I will write the literature review chapter and send it to Dr. Menon on Thursday.
+Dr. Menon: Good. We decided to use YOLOv8 instead of Faster R-CNN because it trains faster on our GPU.
+Arjun: Someone needs to book the lab GPU for the weekend.
+Tanvi: I can do that tomorrow.
+Dr. Menon: Also the evaluation metrics have to be documented properly. Tanvi, add that to the report.
+Dr. Menon: We still need to figure out the demo format. Let's discuss it at the next review on the 26th.

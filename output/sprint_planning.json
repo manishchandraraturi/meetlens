@@ -1,0 +1,624 @@
+{
+  "meta": {
+    "title": "Sprint 7 Planning - Campus Placement Portal",
+    "date": "2026-10-20",
+    "participants": [
+      "Priya Nair",
+      "Rahul Verma",
+      "Ananya Rao",
+      "Karthik Iyer"
+    ],
+    "turns": 21,
+    "words": 251,
+    "duration_min": 28,
+    "agenda": null
+  },
+  "summary": {
+    "overview": [
+      "Accuracy on the test set is around 91 percent, but it still fails on two-column resumes.",
+      "That is a blocker for the demo.",
+      "On the frontend side, the dashboard is ready but the login page still needs work."
+    ],
+    "topics": [
+      "start",
+      "status",
+      "resume",
+      "parser",
+      "module"
+    ]
+  },
+  "decisions": [
+    {
+      "text": "Move the demo to the 30th of October instead of the 27th",
+      "rationale": "the placement cell is unavailable on the 27th",
+      "proposed_by": "Priya Nair",
+      "confirmed_by": "Ananya Rao",
+      "turn": 7,
+      "id": "D1"
+    }
+  ],
+  "actions": [
+    {
+      "task": "Fix the two-column issue and push the patch to the main branch",
+      "owner": "Rahul Verma",
+      "owner_label": null,
+      "pronoun": null,
+      "suggested_owner": null,
+      "deadline": {
+        "raw": "by Friday",
+        "date": "2026-10-23",
+        "kind": "relative"
+      },
+      "priority": "High",
+      "dependency": null,
+      "tentative": false,
+      "vague_task": false,
+      "strength": "explicit",
+      "source": "Rahul, can you fix the two-column issue by Friday?  ->  Yes, I'll fix it by Friday and push the patch to the main branch.",
+      "said_by": "Priya Nair",
+      "turn": 2,
+      "time": "10:04",
+      "status": "ready",
+      "flags": [],
+      "questions": [],
+      "confidence": 1.0,
+      "resolved_fields": [],
+      "accepted_by": "Rahul Verma",
+      "id": "A1"
+    },
+    {
+      "task": "Write the login test cases",
+      "owner": "Karthik Iyer",
+      "owner_label": null,
+      "pronoun": null,
+      "suggested_owner": null,
+      "deadline": {
+        "raw": "by Monday",
+        "date": "2026-10-26",
+        "kind": "relative"
+      },
+      "priority": "Medium",
+      "dependency": null,
+      "tentative": false,
+      "vague_task": false,
+      "strength": "explicit",
+      "source": "Someone should write the test cases for the login flow.  ->  Maybe I can look at it if I get time.  ->  Actually, I'll write the login test cases by Monday.",
+      "said_by": "Karthik Iyer",
+      "turn": 17,
+      "time": "10:25",
+      "status": "ready",
+      "flags": [],
+      "questions": [],
+      "confidence": 1.0,
+      "resolved_fields": [],
+      "revision_notes": [],
+      "mentions": 2,
+      "id": "A2"
+    },
+    {
+      "task": "Figure out the database hosting",
+      "owner": null,
+      "owner_label": "the team",
+      "pronoun": null,
+      "suggested_owner": null,
+      "deadline": null,
+      "priority": "Medium",
+      "dependency": null,
+      "tentative": false,
+      "vague_task": false,
+      "strength": "explicit",
+      "source": "We also need to figure out the database hosting.",
+      "said_by": "Karthik Iyer",
+      "turn": 10,
+      "time": "10:15",
+      "status": "needs_clarification",
+      "flags": [
+        "GROUP_OWNER",
+        "NO_DEADLINE"
+      ],
+      "questions": [
+        {
+          "action_id": "A3",
+          "code": "GROUP_OWNER",
+          "question": "\"the team\" is not a single person. Who will own \"Figure out the database hosting\"?",
+          "fields": [
+            "owner"
+          ],
+          "options": [
+            "Priya Nair",
+            "Rahul Verma",
+            "Ananya Rao",
+            "Karthik Iyer"
+          ],
+          "suggested": null
+        },
+        {
+          "action_id": "A3",
+          "code": "NO_DEADLINE",
+          "question": "By when should \"Figure out the database hosting\" be done?",
+          "fields": [
+            "deadline"
+          ],
+          "options": [],
+          "suggested": null
+        }
+      ],
+      "confidence": 0.6,
+      "resolved_fields": [],
+      "id": "A3"
+    },
+    {
+      "task": "Prepare the demo slides",
+      "owner": "Ananya Rao",
+      "owner_label": null,
+      "pronoun": null,
+      "suggested_owner": null,
+      "deadline": null,
+      "priority": "Medium",
+      "dependency": null,
+      "tentative": false,
+      "vague_task": false,
+      "strength": "explicit",
+      "source": "I'll prepare the demo slides",
+      "said_by": "Ananya Rao",
+      "turn": 12,
+      "time": "10:18",
+      "status": "needs_clarification",
+      "flags": [
+        "NO_DEADLINE"
+      ],
+      "questions": [
+        {
+          "action_id": "A4",
+          "code": "NO_DEADLINE",
+          "question": "By when should \"Prepare the demo slides\" be done?",
+          "fields": [
+            "deadline"
+          ],
+          "options": [],
+          "suggested": null
+        }
+      ],
+      "confidence": 0.85,
+      "resolved_fields": [],
+      "id": "A4"
+    },
+    {
+      "task": "Review the demo slides before the demo",
+      "owner": "Rahul Verma",
+      "owner_label": null,
+      "pronoun": null,
+      "suggested_owner": null,
+      "deadline": null,
+      "priority": "Medium",
+      "dependency": null,
+      "tentative": false,
+      "vague_task": false,
+      "strength": "explicit",
+      "source": "Rahul will review them before the demo.",
+      "said_by": "Ananya Rao",
+      "turn": 12,
+      "time": "10:18",
+      "status": "needs_clarification",
+      "flags": [
+        "NO_DEADLINE"
+      ],
+      "questions": [
+        {
+          "action_id": "A5",
+          "code": "NO_DEADLINE",
+          "question": "By when should \"Review the demo slides before the demo\" be done?",
+          "fields": [
+            "deadline"
+          ],
+          "options": [],
+          "suggested": null
+        }
+      ],
+      "confidence": 0.85,
+      "resolved_fields": [],
+      "id": "A5"
+    },
+    {
+      "task": "Collect feedback from last sprint's users",
+      "owner": null,
+      "owner_label": null,
+      "pronoun": "she",
+      "suggested_owner": null,
+      "deadline": null,
+      "priority": "Medium",
+      "dependency": null,
+      "tentative": false,
+      "vague_task": false,
+      "strength": "explicit",
+      "source": "She should also collect feedback from last sprint's users.",
+      "said_by": "Rahul Verma",
+      "turn": 13,
+      "time": "10:19",
+      "status": "needs_clarification",
+      "flags": [
+        "AMBIGUOUS_PRONOUN",
+        "NO_DEADLINE"
+      ],
+      "questions": [
+        {
+          "action_id": "A6",
+          "code": "AMBIGUOUS_PRONOUN",
+          "question": "Who does \"she\" refer to for the task \"Collect feedback from last sprint's users\"?",
+          "fields": [
+            "owner"
+          ],
+          "options": [
+            "Priya Nair",
+            "Rahul Verma",
+            "Ananya Rao",
+            "Karthik Iyer"
+          ],
+          "suggested": null
+        },
+        {
+          "action_id": "A6",
+          "code": "NO_DEADLINE",
+          "question": "By when should \"Collect feedback from last sprint's users\" be done?",
+          "fields": [
+            "deadline"
+          ],
+          "options": [],
+          "suggested": null
+        }
+      ],
+      "confidence": 0.55,
+      "resolved_fields": [],
+      "id": "A6"
+    },
+    {
+      "task": "Send the updated wireframes to the design team",
+      "owner": "Ananya Rao",
+      "owner_label": null,
+      "pronoun": null,
+      "suggested_owner": null,
+      "deadline": {
+        "raw": "tomorrow",
+        "date": "2026-10-21",
+        "kind": "relative"
+      },
+      "priority": "Medium",
+      "dependency": null,
+      "tentative": false,
+      "vague_task": false,
+      "strength": "explicit",
+      "source": "Ananya, please send the updated wireframes to the design team tomorrow.",
+      "said_by": "Priya Nair",
+      "turn": 14,
+      "time": "10:21",
+      "status": "ready",
+      "flags": [],
+      "questions": [],
+      "confidence": 1.0,
+      "resolved_fields": [],
+      "id": "A7"
+    },
+    {
+      "task": "Deploy the staging build",
+      "owner": null,
+      "owner_label": "the team",
+      "pronoun": null,
+      "suggested_owner": null,
+      "deadline": null,
+      "priority": "Medium",
+      "dependency": "once the parser patch is merged",
+      "tentative": false,
+      "vague_task": false,
+      "strength": "explicit",
+      "source": "Let's deploy the staging build once the parser patch is merged.",
+      "said_by": "Priya Nair",
+      "turn": 16,
+      "time": "10:23",
+      "status": "needs_clarification",
+      "flags": [
+        "GROUP_OWNER",
+        "NO_DEADLINE"
+      ],
+      "questions": [
+        {
+          "action_id": "A8",
+          "code": "GROUP_OWNER",
+          "question": "\"the team\" is not a single person. Who will own \"Deploy the staging build\"?",
+          "fields": [
+            "owner"
+          ],
+          "options": [
+            "Priya Nair",
+            "Rahul Verma",
+            "Ananya Rao",
+            "Karthik Iyer"
+          ],
+          "suggested": null
+        },
+        {
+          "action_id": "A8",
+          "code": "NO_DEADLINE",
+          "question": "By when should \"Deploy the staging build\" be done?",
+          "fields": [
+            "deadline"
+          ],
+          "options": [],
+          "suggested": null
+        }
+      ],
+      "confidence": 0.6,
+      "resolved_fields": [],
+      "id": "A8"
+    },
+    {
+      "task": "Handle the thing with the API keys",
+      "owner": "Rahul Verma",
+      "owner_label": null,
+      "pronoun": null,
+      "suggested_owner": null,
+      "deadline": {
+        "raw": "soon",
+        "date": null,
+        "kind": "vague"
+      },
+      "priority": "Medium",
+      "dependency": null,
+      "tentative": false,
+      "vague_task": true,
+      "strength": "explicit",
+      "source": "Rahul, handle the thing with the API keys soon.",
+      "said_by": "Karthik Iyer",
+      "turn": 17,
+      "time": "10:25",
+      "status": "needs_clarification",
+      "flags": [
+        "VAGUE_DEADLINE",
+        "VAGUE_TASK"
+      ],
+      "questions": [
+        {
+          "action_id": "A9",
+          "code": "VAGUE_DEADLINE",
+          "question": "\"soon\" is not a concrete date. When exactly should \"Handle the thing with the API keys\" be done?",
+          "fields": [
+            "deadline"
+          ],
+          "options": [],
+          "suggested": null
+        },
+        {
+          "action_id": "A9",
+          "code": "VAGUE_TASK",
+          "question": "\"Handle the thing with the API keys\" is too vague. What exactly is the deliverable?",
+          "fields": [
+            "task"
+          ],
+          "options": [],
+          "suggested": null
+        }
+      ],
+      "confidence": 0.55,
+      "resolved_fields": [],
+      "id": "A9"
+    },
+    {
+      "task": "Update the project README",
+      "owner": "Karthik Iyer",
+      "owner_label": null,
+      "pronoun": null,
+      "suggested_owner": null,
+      "deadline": null,
+      "priority": "Medium",
+      "dependency": null,
+      "tentative": false,
+      "vague_task": false,
+      "strength": "explicit",
+      "source": "Action item: update the project README - Karthik",
+      "said_by": "Priya Nair",
+      "turn": 19,
+      "time": "10:27",
+      "status": "needs_clarification",
+      "flags": [
+        "NO_DEADLINE"
+      ],
+      "questions": [
+        {
+          "action_id": "A10",
+          "code": "NO_DEADLINE",
+          "question": "By when should \"Update the project README\" be done?",
+          "fields": [
+            "deadline"
+          ],
+          "options": [],
+          "suggested": null
+        }
+      ],
+      "confidence": 0.85,
+      "resolved_fields": [],
+      "id": "A10"
+    }
+  ],
+  "follow_ups": [
+    {
+      "type": "next_meeting",
+      "text": "Next meeting is next Tuesday to review progress",
+      "date": "2026-10-27",
+      "turn": 20
+    },
+    {
+      "type": "open_issue",
+      "text": "We still need to figure out who approves the hosting cost",
+      "turn": 11,
+      "owner": null
+    },
+    {
+      "type": "dependency",
+      "text": "\"Deploy the staging build\" depends on: once the parser patch is merged",
+      "owner": null,
+      "turn": 16
+    }
+  ],
+  "stats": {
+    "per_speaker": [
+      {
+        "name": "Priya Nair",
+        "words": 125,
+        "turns": 10,
+        "actions": 0
+      },
+      {
+        "name": "Rahul Verma",
+        "words": 46,
+        "turns": 4,
+        "actions": 3
+      },
+      {
+        "name": "Ananya Rao",
+        "words": 36,
+        "turns": 4,
+        "actions": 2
+      },
+      {
+        "name": "Karthik Iyer",
+        "words": 44,
+        "turns": 3,
+        "actions": 2
+      }
+    ],
+    "unassigned": 3
+  },
+  "clarifications": [
+    {
+      "action_id": "A3",
+      "code": "GROUP_OWNER",
+      "question": "\"the team\" is not a single person. Who will own \"Figure out the database hosting\"?",
+      "fields": [
+        "owner"
+      ],
+      "options": [
+        "Priya Nair",
+        "Rahul Verma",
+        "Ananya Rao",
+        "Karthik Iyer"
+      ],
+      "suggested": null
+    },
+    {
+      "action_id": "A3",
+      "code": "NO_DEADLINE",
+      "question": "By when should \"Figure out the database hosting\" be done?",
+      "fields": [
+        "deadline"
+      ],
+      "options": [],
+      "suggested": null
+    },
+    {
+      "action_id": "A4",
+      "code": "NO_DEADLINE",
+      "question": "By when should \"Prepare the demo slides\" be done?",
+      "fields": [
+        "deadline"
+      ],
+      "options": [],
+      "suggested": null
+    },
+    {
+      "action_id": "A5",
+      "code": "NO_DEADLINE",
+      "question": "By when should \"Review the demo slides before the demo\" be done?",
+      "fields": [
+        "deadline"
+      ],
+      "options": [],
+      "suggested": null
+    },
+    {
+      "action_id": "A6",
+      "code": "AMBIGUOUS_PRONOUN",
+      "question": "Who does \"she\" refer to for the task \"Collect feedback from last sprint's users\"?",
+      "fields": [
+        "owner"
+      ],
+      "options": [
+        "Priya Nair",
+        "Rahul Verma",
+        "Ananya Rao",
+        "Karthik Iyer"
+      ],
+      "suggested": null
+    },
+    {
+      "action_id": "A6",
+      "code": "NO_DEADLINE",
+      "question": "By when should \"Collect feedback from last sprint's users\" be done?",
+      "fields": [
+        "deadline"
+      ],
+      "options": [],
+      "suggested": null
+    },
+    {
+      "action_id": "A8",
+      "code": "GROUP_OWNER",
+      "question": "\"the team\" is not a single person. Who will own \"Deploy the staging build\"?",
+      "fields": [
+        "owner"
+      ],
+      "options": [
+        "Priya Nair",
+        "Rahul Verma",
+        "Ananya Rao",
+        "Karthik Iyer"
+      ],
+      "suggested": null
+    },
+    {
+      "action_id": "A8",
+      "code": "NO_DEADLINE",
+      "question": "By when should \"Deploy the staging build\" be done?",
+      "fields": [
+        "deadline"
+      ],
+      "options": [],
+      "suggested": null
+    },
+    {
+      "action_id": "A9",
+      "code": "VAGUE_DEADLINE",
+      "question": "\"soon\" is not a concrete date. When exactly should \"Handle the thing with the API keys\" be done?",
+      "fields": [
+        "deadline"
+      ],
+      "options": [],
+      "suggested": null
+    },
+    {
+      "action_id": "A9",
+      "code": "VAGUE_TASK",
+      "question": "\"Handle the thing with the API keys\" is too vague. What exactly is the deliverable?",
+      "fields": [
+        "task"
+      ],
+      "options": [],
+      "suggested": null
+    },
+    {
+      "action_id": "A10",
+      "code": "NO_DEADLINE",
+      "question": "By when should \"Update the project README\" be done?",
+      "fields": [
+        "deadline"
+      ],
+      "options": [],
+      "suggested": null
+    }
+  ],
+  "health": {
+    "total": 10,
+    "ready": 3,
+    "needs_clarification": 7,
+    "completeness": 30,
+    "avg_confidence": 0.78
+  }
+}

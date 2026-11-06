@@ -1,0 +1,370 @@
+{
+  "meta": {
+    "title": "TechFest 2026 Organising Committee",
+    "date": "2026-10-14",
+    "participants": [
+      "Meera",
+      "Aditya",
+      "Sana",
+      "Vikram"
+    ],
+    "turns": 12,
+    "words": 130,
+    "duration_min": null,
+    "agenda": null
+  },
+  "summary": {
+    "overview": [
+      "We have about three weeks before TechFest, so let's lock the schedule today.",
+      "The auditorium is booked for the 5th of November."
+    ],
+    "topics": [
+      "weeks",
+      "techfest",
+      "lock",
+      "auditorium",
+      "booked"
+    ]
+  },
+  "decisions": [
+    {
+      "text": "Shift the hackathon to the seminar hall",
+      "rationale": "it has better wifi",
+      "proposed_by": "Meera",
+      "confirmed_by": "Sana",
+      "turn": 2,
+      "id": "D1"
+    }
+  ],
+  "actions": [
+    {
+      "task": "Confirm the projector and mic setup with the admin office",
+      "owner": "Aditya",
+      "owner_label": null,
+      "pronoun": null,
+      "suggested_owner": null,
+      "deadline": {
+        "raw": "tomorrow",
+        "date": "2026-10-15",
+        "kind": "relative"
+      },
+      "priority": "Medium",
+      "dependency": null,
+      "tentative": false,
+      "vague_task": false,
+      "strength": "explicit",
+      "source": "I'll confirm the projector and mic setup with the admin office tomorrow.",
+      "said_by": "Aditya",
+      "turn": 1,
+      "time": null,
+      "status": "ready",
+      "flags": [],
+      "questions": [],
+      "confidence": 1.0,
+      "resolved_fields": [],
+      "id": "A1"
+    },
+    {
+      "task": "Design the posters and share the drafts",
+      "owner": "Vikram",
+      "owner_label": null,
+      "pronoun": null,
+      "suggested_owner": null,
+      "deadline": {
+        "raw": "by Thursday",
+        "date": "2026-10-15",
+        "kind": "relative"
+      },
+      "priority": "Medium",
+      "dependency": null,
+      "tentative": false,
+      "vague_task": false,
+      "strength": "explicit",
+      "source": "I'll design the posters and share the drafts by Thursday.",
+      "said_by": "Vikram",
+      "turn": 4,
+      "time": null,
+      "status": "ready",
+      "flags": [],
+      "questions": [],
+      "confidence": 1.0,
+      "resolved_fields": [],
+      "id": "A2"
+    },
+    {
+      "task": "Contact sponsors",
+      "owner": null,
+      "owner_label": "the team",
+      "pronoun": null,
+      "suggested_owner": null,
+      "deadline": null,
+      "priority": "Medium",
+      "dependency": null,
+      "tentative": false,
+      "vague_task": false,
+      "strength": "explicit",
+      "source": "We need to contact sponsors.",
+      "said_by": "Meera",
+      "turn": 5,
+      "time": null,
+      "status": "needs_clarification",
+      "flags": [
+        "GROUP_OWNER",
+        "NO_DEADLINE"
+      ],
+      "questions": [
+        {
+          "action_id": "A3",
+          "code": "GROUP_OWNER",
+          "question": "\"the team\" is not a single person. Who will own \"Contact sponsors\"?",
+          "fields": [
+            "owner"
+          ],
+          "options": [
+            "Meera",
+            "Aditya",
+            "Sana",
+            "Vikram"
+          ],
+          "suggested": null
+        },
+        {
+          "action_id": "A3",
+          "code": "NO_DEADLINE",
+          "question": "By when should \"Contact sponsors\" be done?",
+          "fields": [
+            "deadline"
+          ],
+          "options": [],
+          "suggested": null
+        }
+      ],
+      "confidence": 0.6,
+      "resolved_fields": [],
+      "id": "A3"
+    },
+    {
+      "task": "Reach out to the three companies on the list",
+      "owner": "Sana",
+      "owner_label": null,
+      "pronoun": null,
+      "suggested_owner": null,
+      "deadline": {
+        "raw": "before 20th October",
+        "date": "2026-10-20",
+        "kind": "exact"
+      },
+      "priority": "Medium",
+      "dependency": null,
+      "tentative": false,
+      "vague_task": false,
+      "strength": "explicit",
+      "source": "Sana, could you reach out to the three companies on the list?  ->  Sure, I'll email them before 20th October.",
+      "said_by": "Meera",
+      "turn": 5,
+      "time": null,
+      "status": "ready",
+      "flags": [],
+      "questions": [],
+      "confidence": 1.0,
+      "resolved_fields": [],
+      "accepted_by": "Sana",
+      "id": "A4"
+    },
+    {
+      "task": "Publish the registration form",
+      "owner": "Vikram",
+      "owner_label": null,
+      "pronoun": null,
+      "suggested_owner": null,
+      "deadline": {
+        "raw": "tonight",
+        "date": "2026-10-14",
+        "kind": "relative"
+      },
+      "priority": "Medium",
+      "dependency": null,
+      "tentative": true,
+      "vague_task": false,
+      "strength": "passive",
+      "source": "Also the registration form needs to be published as soon as possible.  ->  I can do it, probably tonight.",
+      "said_by": "Meera",
+      "turn": 7,
+      "time": null,
+      "status": "needs_clarification",
+      "flags": [
+        "TENTATIVE"
+      ],
+      "questions": [
+        {
+          "action_id": "A5",
+          "code": "TENTATIVE",
+          "question": "\"Publish the registration form\" was said tentatively. Is it a firm commitment? (yes / no)",
+          "fields": [
+            "confirm"
+          ],
+          "options": [],
+          "suggested": null
+        }
+      ],
+      "confidence": 0.8,
+      "resolved_fields": [],
+      "volunteered_by": "Vikram",
+      "id": "A5"
+    },
+    {
+      "task": "Check with last year's team",
+      "owner": "Aditya",
+      "owner_label": null,
+      "pronoun": null,
+      "suggested_owner": null,
+      "deadline": null,
+      "priority": "Medium",
+      "dependency": null,
+      "tentative": true,
+      "vague_task": false,
+      "strength": "explicit",
+      "source": "Not sure, let me check with last year's team.",
+      "said_by": "Aditya",
+      "turn": 10,
+      "time": null,
+      "status": "needs_clarification",
+      "flags": [
+        "NO_DEADLINE",
+        "TENTATIVE"
+      ],
+      "questions": [
+        {
+          "action_id": "A6",
+          "code": "NO_DEADLINE",
+          "question": "By when should \"Check with last year's team\" be done?",
+          "fields": [
+            "deadline"
+          ],
+          "options": [],
+          "suggested": null
+        },
+        {
+          "action_id": "A6",
+          "code": "TENTATIVE",
+          "question": "\"Check with last year's team\" was said tentatively. Is it a firm commitment? (yes / no)",
+          "fields": [
+            "confirm"
+          ],
+          "options": [],
+          "suggested": null
+        }
+      ],
+      "confidence": 0.65,
+      "resolved_fields": [],
+      "id": "A6"
+    }
+  ],
+  "follow_ups": [
+    {
+      "type": "next_meeting",
+      "text": "Let's revisit that in the next meeting on Friday",
+      "date": "2026-10-16",
+      "turn": 11
+    },
+    {
+      "type": "open_issue",
+      "text": "We haven't decided how many volunteers we need",
+      "turn": 9,
+      "owner": null
+    }
+  ],
+  "stats": {
+    "per_speaker": [
+      {
+        "name": "Meera",
+        "words": 74,
+        "turns": 6,
+        "actions": 0
+      },
+      {
+        "name": "Aditya",
+        "words": 30,
+        "turns": 2,
+        "actions": 2
+      },
+      {
+        "name": "Sana",
+        "words": 10,
+        "turns": 2,
+        "actions": 1
+      },
+      {
+        "name": "Vikram",
+        "words": 16,
+        "turns": 2,
+        "actions": 2
+      }
+    ],
+    "unassigned": 1
+  },
+  "clarifications": [
+    {
+      "action_id": "A3",
+      "code": "GROUP_OWNER",
+      "question": "\"the team\" is not a single person. Who will own \"Contact sponsors\"?",
+      "fields": [
+        "owner"
+      ],
+      "options": [
+        "Meera",
+        "Aditya",
+        "Sana",
+        "Vikram"
+      ],
+      "suggested": null
+    },
+    {
+      "action_id": "A3",
+      "code": "NO_DEADLINE",
+      "question": "By when should \"Contact sponsors\" be done?",
+      "fields": [
+        "deadline"
+      ],
+      "options": [],
+      "suggested": null
+    },
+    {
+      "action_id": "A5",
+      "code": "TENTATIVE",
+      "question": "\"Publish the registration form\" was said tentatively. Is it a firm commitment? (yes / no)",
+      "fields": [
+        "confirm"
+      ],
+      "options": [],
+      "suggested": null
+    },
+    {
+      "action_id": "A6",
+      "code": "NO_DEADLINE",
+      "question": "By when should \"Check with last year's team\" be done?",
+      "fields": [
+        "deadline"
+      ],
+      "options": [],
+      "suggested": null
+    },
+    {
+      "action_id": "A6",
+      "code": "TENTATIVE",
+      "question": "\"Check with last year's team\" was said tentatively. Is it a firm commitment? (yes / no)",
+      "fields": [
+        "confirm"
+      ],
+      "options": [],
+      "suggested": null
+    }
+  ],
+  "health": {
+    "total": 6,
+    "ready": 3,
+    "needs_clarification": 3,
+    "completeness": 50,
+    "avg_confidence": 0.84
+  }
+}

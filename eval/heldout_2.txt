@@ -1,0 +1,15 @@
+Title: Product Launch Sync
+Date: 2026-10-15
+Attendees: Neha, Sameer, Kavya, Rohit
+
+Neha: The launch is on 12th November and the landing page is the biggest risk right now.
+Sameer: Design is done. Kavya will integrate it by next Wednesday.
+Kavya: Yes, that works. I need the final copy before I start though.
+Neha: Rohit, can you share the final copy with Kavya by Monday?
+Rohit: Will do. I'll also set up the analytics dashboard, hopefully by Friday.
+Neha: We should send a teaser email to the waitlist. Sameer, can you take that?
+Sameer: Sure, I'll draft it tomorrow.
+Neha: Let's go with the 9 AM slot for the launch announcement.
+Rohit: Sounds good.
+Neha: Someone should check the payment gateway in staging asap.
+Kavya: I'll look into it.

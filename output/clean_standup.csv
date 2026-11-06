@@ -1,0 +1,4 @@
+ID,Task,Owner,Deadline,Priority,Status,Confidence,Depends on,Open questions
+A1,Write the deployment guide,Isha,"Fri, 23 Oct 2026",Medium,ready,1.0,,
+A2,Migrate the user table to PostgreSQL,Neel,"Wed, 28 Oct 2026",Medium,ready,1.0,,
+A3,Review the migration scripts,Dev,"Thu, 29 Oct 2026",Medium,ready,1.0,,

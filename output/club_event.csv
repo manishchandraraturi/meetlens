@@ -1,0 +1,7 @@
+ID,Task,Owner,Deadline,Priority,Status,Confidence,Depends on,Open questions
+A1,Confirm the projector and mic setup with the admin office,Aditya,"Thu, 15 Oct 2026",Medium,ready,1.0,,
+A2,Design the posters and share the drafts,Vikram,"Thu, 15 Oct 2026",Medium,ready,1.0,,
+A3,Contact sponsors,,,Medium,needs_clarification,0.6,,"""the team"" is not a single person. Who will own ""Contact sponsors""? | By when should ""Contact sponsors"" be done?"
+A4,Reach out to the three companies on the list,Sana,"Tue, 20 Oct 2026",Medium,ready,1.0,,
+A5,Publish the registration form,Vikram,"Wed, 14 Oct 2026",Medium,needs_clarification,0.8,,"""Publish the registration form"" was said tentatively. Is it a firm commitment? (yes / no)"
+A6,Check with last year's team,Aditya,,Medium,needs_clarification,0.65,,"By when should ""Check with last year's team"" be done? | ""Check with last year's team"" was said tentatively. Is it a firm commitment? (yes / no)"

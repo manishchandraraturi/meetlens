@@ -1,0 +1,67 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MeetLens</title>
+<style>
+:root{--bg:#fafaf7;--card:#fff;--ink:#1c1f24;--mut:#667;--line:#e4e4de;--acc:#1f5eff;--ok:#12805c;--warn:#b45309;--bad:#b42318}
+@media(prefers-color-scheme:dark){:root{--bg:#14161a;--card:#1d2026;--ink:#ecedee;--mut:#9aa0a6;--line:#2c3038;--acc:#6b9bff;--ok:#4cc79a;--warn:#f0a548;--bad:#ff8a80}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{padding:16px 22px;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:12px}header b{font-size:19px}header span{color:var(--mut)}
+main{display:grid;grid-template-columns:minmax(300px,420px) 1fr;gap:18px;padding:18px 22px;max-width:1300px;margin:auto}
+@media(max-width:860px){main{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px}
+textarea{width:100%;height:340px;resize:vertical;border:1px solid var(--line);border-radius:8px;padding:10px;font:13px/1.45 ui-monospace,Menlo,Consolas,monospace;background:var(--bg);color:var(--ink)}
+input,select{border:1px solid var(--line);border-radius:8px;padding:7px 9px;background:var(--bg);color:var(--ink);font:inherit;max-width:100%}
+button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:8px 14px;font:inherit;cursor:pointer}
+button.p{background:var(--acc);border-color:var(--acc);color:#fff}button:hover{filter:brightness(.96)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:8px 0}h3{margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
+.kpi{display:flex;gap:10px;flex-wrap:wrap}.kpi div{flex:1;min-width:110px;border:1px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--card)}.kpi b{display:block;font-size:21px}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:8px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{font-size:11px;color:var(--mut);text-transform:uppercase}
+.tw{overflow-x:auto}.pill{display:inline-block;padding:0 8px;border-radius:99px;font-size:11px;border:1px solid var(--line);margin:2px 3px 0 0;color:var(--mut)}
+.ready{color:var(--ok)}.needs_clarification{color:var(--warn)}.High{color:var(--bad)}.sub{color:var(--mut);font-size:13px}
+.bar{display:inline-block;width:56px;height:6px;border-radius:9px;background:var(--line);vertical-align:middle;overflow:hidden}.bar i{display:block;height:100%;background:var(--acc)}
+.q{border-left:3px solid var(--warn);padding:6px 10px;margin:8px 0;background:var(--bg);border-radius:0 8px 8px 0}.err{color:var(--bad);font-size:13px}ul{padding-left:20px;margin:4px 0}
+</style></head><body>
+<header><b>MeetLens</b><span>Meeting transcript to action items, with clarification</span></header>
+<main>
+<section>
+ <div class="card"><h3>Transcript</h3>
+  <div class="row"><select id="sample"></select><label class="sub">Meeting date <input type="date" id="date"></label></div>
+  <textarea id="text" placeholder="Paste a transcript. Format:  [10:02] Name: what they said"></textarea>
+  <div class="row"><button class="p" id="go">Analyse</button><span class="sub" id="status"></span></div>
+ </div>
+</section>
+<section id="out"><div class="card sub">Pick a sample or paste a transcript, then press Analyse.</div></section>
+</main>
+<script>
+const $=id=>document.getElementById(id);let R=null,samples={};
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmtD=d=>d?new Date(d+"T00:00").toLocaleDateString("en-GB",{weekday:"short",day:"2-digit",month:"short",year:"numeric"}):"";
+fetch("/api/samples").then(r=>r.json()).then(s=>{samples=s;$("sample").innerHTML='<option value="">Load a sample...</option>'+Object.keys(s).map(k=>`<option>${esc(k)}</option>`).join("")});
+$("sample").onchange=e=>{if(e.target.value)$("text").value=samples[e.target.value]};
+async function post(u,b){const r=await fetch(u,{method:"POST",body:JSON.stringify(b)});const j=await r.json();if(!r.ok)throw new Error(j.error);return j}
+$("go").onclick=async()=>{ $("status").textContent="Analysing...";try{R=await post("/api/analyze",{text:$("text").value,date:$("date").value});render();$("status").textContent=""}catch(e){$("status").innerHTML='<span class="err">'+esc(e.message)+'</span>'}};
+function owner(a){return a.owner||(a.pronoun?`? (${a.pronoun})`:"? Unassigned")}
+function dl(a){const d=a.deadline;return !d?"-":d.date?fmtD(d.date):esc(d.raw)+" (vague)"}
+function render(){const h=R.health,m=R.meta;let H="";
+H+=`<div class="card"><b>${esc(m.title)}</b><div class="sub">${esc(m.date)} &middot; ${esc(m.participants.join(", "))}</div>
+<div class="kpi" style="margin-top:10px"><div><b>${h.total}</b>action items</div><div><b>${R.decisions.length}</b>decisions</div><div><b>${h.completeness}%</b>fully specified</div><div><b>${R.clarifications.length}</b>open questions</div></div></div>`;
+H+=`<div class="card"><h3>Summary</h3><ul>${R.summary.overview.map(x=>`<li>${esc(x)}</li>`).join("")}</ul><div class="sub">Topics: ${esc(R.summary.topics.join(", "))}</div></div>`;
+H+=`<div class="card"><h3>Decisions</h3>${R.decisions.map(d=>`<div style="margin:6px 0"><b>${d.id}.</b> ${esc(d.text)}<div class="sub">${d.rationale?"Because "+esc(d.rationale)+". ":""}${d.confirmed_by?"Confirmed by "+esc(d.confirmed_by):""}</div></div>`).join("")||'<span class="sub">None recorded.</span>'}</div>`;
+H+=`<div class="card"><h3>Action items</h3><div class="tw"><table><tr><th>ID</th><th>Task</th><th>Owner</th><th>Deadline</th><th>Priority</th><th>Status</th><th>Conf.</th></tr>`;
+for(const a of R.actions){if(a.status==="dropped")continue;
+H+=`<tr><td>${a.id}</td><td>${esc(a.task)}${a.dependency?`<div class="sub">Depends on: ${esc(a.dependency)}</div>`:""}${(a.revision_notes||[]).map(n=>`<div class="sub">Revised: ${esc(n)}</div>`).join("")}<div>${a.flags.map(f=>`<span class="pill">${esc(f.replace(/_/g," ").toLowerCase())}</span>`).join("")}</div></td><td>${esc(owner(a))}</td><td>${dl(a)}</td><td class="${a.priority}">${a.priority}</td><td class="${a.status}">${a.status==="ready"?"Ready":"Needs clarification"}</td><td><span class="bar"><i style="width:${a.confidence*100}%"></i></span> ${a.confidence}</td></tr>`}
+H+=`</table></div></div>`;
+const need=R.actions.filter(a=>a.status==="needs_clarification");
+if(need.length){H+=`<div class="card"><h3>Clarifications needed</h3><div class="sub">Answer what you know and press Apply. The assistant re-checks every item.</div>`;
+for(const a of need){H+=`<div class="q"><b>${a.id}</b> ${esc(a.task)}${a.answer_error?`<div class="err">${esc(a.answer_error)}</div>`:""}`;
+for(const q of a.questions){if(q.code==="REVISED")continue;const f=q.fields[0];
+let inp=f==="owner"?`<input list="p" data-a="${a.id}" data-f="owner" placeholder="${esc(q.suggested?"e.g. "+q.suggested:"Name")}"><datalist id="p">${(q.options||[]).map(o=>`<option>${esc(o)}</option>`).join("")}</datalist>`
+:f==="confirm"?`<select data-a="${a.id}" data-f="confirm"><option value="">Choose...</option><option>yes</option><option>no</option></select>`
+:`<input data-a="${a.id}" data-f="${f}" placeholder="${f==="deadline"?"e.g. 28 Oct or next Friday":"Describe the deliverable"}">`;
+H+=`<div class="row"><span style="flex:1;min-width:220px">${esc(q.question)}</span>${inp}</div>`}H+=`</div>`}
+H+=`<div class="row"><button class="p" id="apply">Apply answers</button></div></div>`}
+H+=`<div class="card"><h3>Follow-ups</h3><ul>${R.follow_ups.map(f=>`<li><b>${esc(f.type.replace(/_/g," "))}:</b> ${esc(f.text)}${f.date?" ("+esc(f.date)+")":""}</li>`).join("")||"<li>None.</li>"}</ul></div>`;
+H+=`<div class="row">Export: ${["md","html","csv","json"].map(x=>`<button data-x="${x}">${x.toUpperCase()}</button>`).join("")}</div>`;
+$("out").innerHTML=H;
+const ap=$("apply");if(ap)ap.onclick=async()=>{const ans={};document.querySelectorAll("[data-a]").forEach(el=>{if(el.value.trim()){(ans[el.dataset.a]??={})[el.dataset.f]=el.value.trim()}});R=await post("/api/resolve",{result:R,answers:ans});render()};
+document.querySelectorAll("[data-x]").forEach(b=>b.onclick=async()=>{const r=await fetch("/api/export",{method:"POST",body:JSON.stringify({format:b.dataset.x,result:R})});const blob=await r.blob();const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="meeting."+b.dataset.x;a.click()})}
+</script></body></html>

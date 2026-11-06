@@ -1,0 +1,9 @@
+Title: Weekly Backend Standup
+Date: 2026-10-19
+
+Dev: Quick update. The payment API integration is complete and tested.
+Isha: I'll write the deployment guide by 23rd October.
+Dev: Great. We've decided to use PostgreSQL instead of MongoDB because the data is highly relational.
+Isha: Makes sense. Neel, can you migrate the user table to PostgreSQL by 28th October?
+Neel: Yes, I'll migrate the user table by 28th October.
+Dev: I will review the migration scripts on 29th October.

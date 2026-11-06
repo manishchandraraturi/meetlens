@@ -1,0 +1,11 @@
+ID,Task,Owner,Deadline,Priority,Status,Confidence,Depends on,Open questions
+A1,Fix the two-column issue and push the patch to the main branch,Rahul Verma,"Fri, 23 Oct 2026",High,ready,1.0,,
+A2,Write the login test cases,Karthik Iyer,"Mon, 26 Oct 2026",Medium,ready,1.0,,
+A3,Figure out the database hosting,,,Medium,needs_clarification,0.6,,"""the team"" is not a single person. Who will own ""Figure out the database hosting""? | By when should ""Figure out the database hosting"" be done?"
+A4,Prepare the demo slides,Ananya Rao,,Medium,needs_clarification,0.85,,"By when should ""Prepare the demo slides"" be done?"
+A5,Review the demo slides before the demo,Rahul Verma,,Medium,needs_clarification,0.85,,"By when should ""Review the demo slides before the demo"" be done?"
+A6,Collect feedback from last sprint's users,,,Medium,needs_clarification,0.55,,"Who does ""she"" refer to for the task ""Collect feedback from last sprint's users""? | By when should ""Collect feedback from last sprint's users"" be done?"
+A7,Send the updated wireframes to the design team,Ananya Rao,"Wed, 21 Oct 2026",Medium,ready,1.0,,
+A8,Deploy the staging build,,,Medium,needs_clarification,0.6,once the parser patch is merged,"""the team"" is not a single person. Who will own ""Deploy the staging build""? | By when should ""Deploy the staging build"" be done?"
+A9,Handle the thing with the API keys,Rahul Verma,soon (vague),Medium,needs_clarification,0.55,,"""soon"" is not a concrete date. When exactly should ""Handle the thing with the API keys"" be done? | ""Handle the thing with the API keys"" is too vague. What exactly is the deliverable?"
+A10,Update the project README,Karthik Iyer,,Medium,needs_clarification,0.85,,"By when should ""Update the project README"" be done?"

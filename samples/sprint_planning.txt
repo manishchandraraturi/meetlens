@@ -1,0 +1,25 @@
+Title: Sprint 7 Planning - Campus Placement Portal
+Date: 2026-10-20
+Attendees: Priya Nair, Rahul Verma, Ananya Rao, Karthik Iyer
+
+[10:00] Priya: Good morning everyone. Let's start with the status of the resume parser module.
+[10:02] Rahul: The parser is mostly done. Accuracy on the test set is around 91 percent, but it still fails on two-column resumes.
+[10:04] Priya: That is a blocker for the demo. Rahul, can you fix the two-column issue by Friday?
+[10:05] Rahul: Yes, I'll fix it by Friday and push the patch to the main branch.
+[10:07] Ananya: On the frontend side, the dashboard is ready but the login page still needs work.
+[10:08] Priya: Someone should write the test cases for the login flow.
+[10:09] Karthik: Maybe I can look at it if I get time.
+[10:11] Priya: How about we move the demo to the 30th of October instead of the 27th?
+[10:12] Ananya: Agreed, that gives us more buffer.
+[10:13] Priya: Okay, decision made. We'll go with the 30th because the placement cell is unavailable on the 27th.
+[10:15] Karthik: We also need to figure out the database hosting. I have no idea about the budget.
+[10:16] Priya: Not sure either. We still need to figure out who approves the hosting cost.
+[10:18] Ananya: I'll prepare the demo slides and Rahul will review them before the demo.
+[10:19] Rahul: Sure. She should also collect feedback from last sprint's users.
+[10:21] Priya: Ananya, please send the updated wireframes to the design team tomorrow.
+[10:22] Ananya: Will do.
+[10:23] Priya: Let's deploy the staging build once the parser patch is merged.
+[10:25] Karthik: Actually, I'll write the login test cases by Monday. Rahul, handle the thing with the API keys soon.
+[10:26] Rahul: Okay.
+[10:27] Priya: Action item: update the project README - Karthik
+[10:28] Priya: Next meeting is next Tuesday to review progress. Thanks everyone.
